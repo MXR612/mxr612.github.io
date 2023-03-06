@@ -16,6 +16,8 @@
 
 ## 幫助熱線
 
+[HKBU輔導中心](https://sa.hkbu.edu.hk/cdc/tc)
+
 明愛向晴軒Caritas Family Crisis Support Centre：[18288](tel:18288)
 
 利民會《即時通》精神健康守護同行計劃Richmond Fellowship of HK (Justone)：[35122626](tel:35122626)
