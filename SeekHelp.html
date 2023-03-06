@@ -6,7 +6,6 @@
 <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4, h5 { white-space: pre-wrap; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
@@ -23,6 +22,8 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -50,7 +51,7 @@ sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inh
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-thead, tr { break-inside: avoid; break-after: auto; }
+tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
@@ -72,7 +73,6 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
-svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
@@ -87,14 +87,12 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
-  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
-  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -132,7 +130,6 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
-.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
@@ -171,7 +168,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
@@ -202,7 +199,6 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
-mjx-container { break-inside: avoid; }
 
 
 :root {
@@ -461,8 +457,11 @@ code {
     html {
         font-size: 13px;
     }
+    table,
     pre {
         page-break-inside: avoid;
+    }
+    pre {
         word-wrap: break-word;
     }
 }
@@ -594,7 +593,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>SeekHelp</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='seek-help'><span>Seek Help</span></h1><h2 id='shall-we-talks-website'><a href='https://www.shallwetalk.hk/zh/get-help/emergency-helplines/'><span>Shall We Talk’s Website</span></a></h2><h2 id='24hs求助熱線'><span>24hs求助熱線：</span></h2><p><span>明愛向晴軒Caritas Family Crisis Support Centre-家庭危機-</span><a href='tel:18288'><span>18288</span></a></p><p><span>醫院管理局Hospital Authority-精神健康-</span><a href='tel:24667350'><span>24667350</span></a></p><p><span>利民會《即時通》精神健康守護同行計劃Richmond Fellowship of HK(Justone)-綜合熱線（專人</span>
-<span>接聽）-</span><a href='tel:35122626'><span>35122626</span></a></p><p><span>社會福利署Social Welfare Department-綜合熱線-</span><a href='tel:23432255'><span>23432255</span></a></p><p><span>生命熱線Suicide Prevention Service -綜合熱線-</span><a href='tel:23820000'><span>23820000</span></a></p><p><span>香港撒瑪利亞防止自殺會The Samaritan Befrienders HK-綜合熱線-</span><a href='tel:23892222'><span>23892222</span></a></p><p><span>撒瑪利亞會The Samaritans：</span><a href='tel:28960000'><span>28960000</span></a><span>。-多種語言-防止自殺-</span></p><h2 id='社區'><span>社區</span></h2></div></div>
+<div id='write'  class=''><h1 id='seek-help'><span>Seek Help</span></h1><p><span>你真的很勇敢！求助是很需要勇氣的事，我們知道你能來到這裡已經克服了很大的阻力。</span></p><p><span>在香港近四成的抑鬱症患者沒能尋求專業的幫助，而每位精神病患者平均需要花費十年尋求幫助。就像肚痛要看醫生，當人們有心理困擾的時候，最好的方式應該是尋求專業的幫助。</span></p><p><span>這裡有一些求助的方式，你可以選一個最適合自己的方式。希望你能找到幫助自己的方法！</span></p><p><strong><span>若果您認為自己可能會採取自殺行為</span></strong><span>，或者您已經嚴重傷害自己：請致電</span><a href='tel:999'><span>999</span></a><span>或前往最近的急症室求診。</span></p><p><strong><span>如果您感到非常困擾或有自殺的想法：</span></strong><span>您可以隨時撥打多個幫助熱線，以聯繫受過訓練的志願者，他們希望聆聽並幫助您以獲得所需的支持。 </span></p><p><strong><span>如果您需要幫助但情況不緊急</span></strong><span>，您可以與您的醫生或精神健康專業人員預約。</span></p><p><strong><span>如果可以</span></strong><span>，你可以與信任的朋友或家庭成員，或者尋找醫療或心理健康專家傾談。 展開對話可能讓你感到很困難，但這些人希望了解你並幫助你。</span></p><h2 id='幫助熱線'><span>幫助熱線</span></h2><p><a href='tel:18288'><span>明愛向晴軒Caritas Family Crisis Support Centre：18288</span></a></p><p><a href='tel:35122626'><span>利民會《即時通》精神健康守護同行計劃Richmond Fellowship of HK (Justone)：35122626</span></a></p><p><a href='tel:23820000'><span>生命熱線Suicide Prevention Service23820000</span></a></p><p><a href='tel:23892222'><span>香港撒瑪利亞防止自殺會The Samaritan Befrienders23892222</span></a></p><p><a href='tel:28960000'><span>撒瑪利亞會The Samaritans：28960000</span></a></p><p><a href='tel:23432255'><span>社會福利署Social Welfare Department：23432255</span></a></p><p><a href='tel:24667350'><span>醫院管理局（公立資源）:24667350</span></a></p><h2 id='精神健康專業人員'><span>精神健康專業人員</span></h2><p><a href='https://www.mind.org.hk/zh-hant/community-directory/'><span>香港NGO</span></a></p><p><a href='https://www.swd.gov.hk/storage/asset/section/2383/tc/List_of_24_ICCMWs_092022.pdf'><span>精神健康綜合社區中心</span></a></p><p><a href='https://hkps-dcp.org.hk/images/downloads/CPP%20-%20April%202019.pdf'><span>香港心理學家</span></a></p><p><a href='https://www.hkcpsych.org.hk/index.php?option=com_docman&amp;view=docman&amp;Itemid=465&amp;lang=tw'><span>香港精神科醫生</span></a></p></div></div>
 </body>
 </html>

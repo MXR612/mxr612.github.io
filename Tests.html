@@ -6,7 +6,6 @@
 <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-h1, h2, h3, h4, h5 { white-space: pre-wrap; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
@@ -23,6 +22,8 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -50,7 +51,7 @@ sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inh
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-thead, tr { break-inside: avoid; break-after: auto; }
+tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
@@ -72,7 +73,6 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
-svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
@@ -87,14 +87,12 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
-  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
-  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -132,7 +130,6 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
-.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
@@ -171,7 +168,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
 .outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
@@ -202,7 +199,6 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
-mjx-container { break-inside: avoid; }
 
 
 :root {
@@ -461,8 +457,11 @@ code {
     html {
         font-size: 13px;
     }
+    table,
     pre {
         page-break-inside: avoid;
+    }
+    pre {
         word-wrap: break-word;
     }
 }
@@ -594,6 +593,6 @@ header, .context-menu, .megamenu-content, footer{
 </style><title>Tests</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='psychological-tests'><span>Psychological Tests</span></h1><p><span>嗨，感謝你願意參與到我們的活動中。</span></p><p><span>我們找了一些有意思測試，跟你的個性、情緒、心理技巧有關，希望能給你提供一些參考。但請注意，這些測試的結果都不是恆定不變的，包括人格測試。希望你能藉助它們瞭解自己，並向着自己的價值和理想前進。</span></p><p><span>如果你的狀態已經影響了你的日常生活和學業表現，不論在測試中獲得了怎樣的結果，都希望你能</span><a href='https://mxr612.github.io/SeekHelp.html'><span>尋求專業的幫助</span></a><span>。</span></p><h2 id='個性'><span>個性:</span></h2><h3 id='大五人格50-items'><a href='https://treehole.hk/big5/'><span>大五人格</span></a><span>(50 items)</span></h3><p><span>這是一個在心理學中常用的測試，並廣泛用於各個領域，信度高於人們熟悉的的MBTI、九型人格等。題目雖然多滴，但應該都值得。</span></p><!--個性優勢(cerester stream 24條)--><h3 id='你是願意成長嗎8-items'><a href='https://treehole.hk/resources/growth-mindset/'><span>你是願意成長嗎？</span></a><span>(8 items)</span></h3><!-- [巴納姆性格測試](https://treehole.hk/resources/barnum-personality-test/) --><h3 id='人生重要領域85-items'><a href='https://ebp.gesedna.com/assessment/valueorientation'><span>人生重要領域</span></a><span>(85 items)</span></h3><p><span>哇，這個好多啊，得閒再說？其實是因爲列舉了很多領域啦，如果你正在尋找方向的話，可以試一下。</span></p><!-- [(45)](https://ebp.gesedna.com/assessment/mindset) --><!-- [應對策略(50)](https://ebp.gesedna.com/assessment/cope) --><!-- [樂觀悲觀](https://ebp.gesedna.com/assessment/attribution) --><!-- [幽默類型](https://ebp.gesedna.com/assessment/humor/) --><h2 id='困擾'><span>困擾</span></h2><h3 id='凱斯勒心理困擾量表k1010-items'><a href='https://www.shallwetalk.hk/zh/mental-health-information/psychological-distress-test/'><span>凱斯勒心理困擾量表(K10)</span></a><span>(10 items)</span></h3><h3 id='心理健康指数测试包含了phq-9-gad-7-pss-4-psqi-ffm）30-items'><a href='https://ebp.gesedna.com/assessment/panelshort'><span>心理健康指数测试（包含了PHQ-9, GAD-7, PSS-4, PSQI, FFM）</span></a><span>(30 items)</span></h3><!-- [此刻心情 (33)](https://ebp.gesedna.com/assessment/moodidentifier) --><!-- [抑鬱&快樂 (PHQ-9+SHS)](https://treehole.hk/phq9-2/) --><h2 id='能力'><span>能力</span></h2><h3 id='在遇到困難的時候你會尋求幫助嗎24-items'><a href='https://ebp.gesedna.com/assessment/helpseeking'><span>在遇到困難的時候，你會尋求幫助嗎？</span></a><span>(24 items)</span></h3><h3 id='你活得正觀嘛-cmaas15-items'><a href='https://treehole.hk/resources/mindfulness-test-cmaas/'><span>你活得正觀嘛？ (cmaas)</span></a><span>(15 items)</span></h3><p><span>正觀是一種態度。</span></p><!-- [靜觀五因 (39)](https://ebp.gesedna.com/assessment/mindfulness-2) --><h2 id='如果你感興趣看看這些內容'><span>如果你感興趣，看看這些內容：</span></h2><p><a href='https://sparqtools.org/measuringmobility-selector/'><span>Stanford</span></a></p><!-- [The Big Book of Blob Trees](https://www.taylorfrancis.com/books/mono/10.4324/9781351113397/big-book-blob-trees-pip-wilson-ian-long) --></div></div>
+<div id='write'  class=''><h1 id='psychological-tests'><span>Psychological Tests</span></h1><p><span>嗨，感謝你願意參與到我們的活動中。</span></p><p><span>我們找了一些有意思測試，跟你的個性、情緒、心理技巧有關，希望能給你提供一些參考。但請注意，這些測試的結果都不是恆定不變的，包括人格測試。希望你能藉助它們瞭解自己，並向着自己的價值和理想前進。</span></p><p><span>如果你的狀態已經影響了你的日常生活和學業表現，不論在測試中獲得了怎樣的結果，都希望你能</span><a href='https://mxr612.github.io/SeekHelp.html'><span>尋求專業的幫助</span></a><span>。</span></p><h2 id='個性'><span>個性:</span></h2><h3 id='大五人格50-items'><a href='https://treehole.hk/big5/'><span>大五人格</span></a><span>(50 items)</span></h3><p><span>這是一個在心理學中常用的測試，並廣泛用於各個領域，信度高於人們熟悉的的MBTI、九型人格等。題目雖然多滴，但應該都值得。</span></p><!--個性優勢(cerester stream 24條)--><h3 id='你是願意成長嗎8-items'><a href='https://treehole.hk/resources/growth-mindset/'><span>你是願意成長嗎？</span></a><span>(8 items)</span></h3><p><span>看看你是願意提升自己的還是安於現狀的？</span></p><!-- [巴納姆性格測試](https://treehole.hk/resources/barnum-personality-test/) --><h3 id='人生重要領域85-items'><a href='https://ebp.gesedna.com/assessment/valueorientation'><span>人生重要領域</span></a><span>(85 items)</span></h3><p><span>哇，這個好多啊，得閒再說？其實是因爲列舉了很多領域啦，如果你正在尋找方向的話，可以試一下。不同的價值可以引導人做出不同的判斷和行爲，看看你最重視的是哪一塊，家庭、朋友還是學業？</span></p><!-- [(45)](https://ebp.gesedna.com/assessment/mindset) --><!-- [應對策略(50)](https://ebp.gesedna.com/assessment/cope) --><!-- [樂觀悲觀](https://ebp.gesedna.com/assessment/attribution) --><!-- [幽默類型](https://ebp.gesedna.com/assessment/humor/) --><h2 id='困擾'><span>困擾</span></h2><h3 id='凱斯勒心理困擾量表k1010-items'><a href='https://www.shallwetalk.hk/zh/mental-health-information/psychological-distress-test/'><span>凱斯勒心理困擾量表(K10)</span></a><span>(10 items)</span></h3><p><span>十條問題可以測出你現在的情緒困擾程度哦。心理學將“健康”定義爲可以“無障礙地完成日常功能”，測測你的心理困擾有沒有影響你的日常生活吧！</span></p><h3 id='心理健康指数测试包含了phq-9-gad-7-pss-4-psqi-ffm）30-items'><a href='https://ebp.gesedna.com/assessment/panelshort'><span>心理健康指数测试（包含了PHQ-9, GAD-7, PSS-4, PSQI, FFM）</span></a><span>(30 items)</span></h3><p><span>這是一個包含了很多心理困擾簡化量表的測試，只有30題，值得一試。</span></p><!-- [抑鬱&快樂 (PHQ-9+SHS)](https://treehole.hk/phq9-2/) --><h2 id='能力'><span>能力</span></h2><h3 id='在遇到困難的時候你會尋求幫助嗎24-items'><a href='https://ebp.gesedna.com/assessment/helpseeking'><span>在遇到困難的時候，你會尋求幫助嗎？</span></a><span>(24 items)</span></h3><p><span>求助是很需要勇氣的事，在香港近四成的抑鬱症患者沒能尋求專業的幫助，而每位精神病患者平均需要花費十年尋求幫助。就像肚痛要看醫生，當人們有心理困擾的時候，最好的方式應該是尋求專業的幫助。看看你有沒有這種勇氣呢？</span></p><h3 id='你活得正觀嘛-cmaas15-items'><a href='https://treehole.hk/resources/mindfulness-test-cmaas/'><span>你活得正觀嘛？ (cmaas)</span></a><span>(15 items)</span></h3><p><span>正觀是一種態度。給自己一段時間擺脫對過去的回憶和對未來的擔憂，認真地與自己相處，感受吹過臉龐的風或者口中食物的滋味。</span></p><h3 id='此刻心情33-items'><a href='https://ebp.gesedna.com/assessment/moodidentifier'><span>此刻心情</span></a><span>(33 items)</span></h3><p><span>描述此刻的感受是一種正念的行爲，可以試試描述一下此刻的心情，然後看看是否準確？</span></p><!-- [靜觀五因 (39)](https://ebp.gesedna.com/assessment/mindfulness-2) --><h2 id='如果你感興趣看看這些內容'><span>如果你感興趣，看看這些內容：</span></h2><p><a href='https://sparqtools.org/measuringmobility-selector/'><span>Stanford</span></a></p><!-- [The Big Book of Blob Trees](https://www.taylorfrancis.com/books/mono/10.4324/9781351113397/big-book-blob-trees-pip-wilson-ian-long) --></div></div>
 </body>
 </html>
