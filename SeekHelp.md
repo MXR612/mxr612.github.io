@@ -16,19 +16,19 @@
 
 ## 幫助熱線
 
-[明愛向晴軒Caritas Family Crisis Support Centre：18288](tel:18288)
+明愛向晴軒Caritas Family Crisis Support Centre：[18288](tel:18288)
 
-[利民會《即時通》精神健康守護同行計劃Richmond Fellowship of HK (Justone)：35122626](tel:35122626)
+利民會《即時通》精神健康守護同行計劃Richmond Fellowship of HK (Justone)：[35122626](tel:35122626)
 
-[生命熱線Suicide Prevention Service23820000](tel:23820000)
+生命熱線Suicide Prevention Service：[23820000](tel:23820000)
 
-[香港撒瑪利亞防止自殺會The Samaritan Befrienders23892222](tel:23892222)
+香港撒瑪利亞防止自殺會The Samaritan Befrienders：[23892222](tel:23892222)
 
-[撒瑪利亞會The Samaritans：28960000](tel:28960000)
+撒瑪利亞會The Samaritans：[28960000](tel:28960000)
 
-[社會福利署Social Welfare Department：23432255](tel:23432255)
+社會福利署Social Welfare Department：[23432255](tel:23432255)
 
-[醫院管理局（公立資源）:24667350](tel:24667350)
+醫院管理局（公立資源）:[24667350](tel:24667350)
 
 ## 精神健康專業人員
 
