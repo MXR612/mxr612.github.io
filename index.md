@@ -1,4 +1,4 @@
-# A Home Page: Mental Health@Wellness Week
+# Mental Health Gate Keeper@Wellness Week
 
 嗨，感謝你願意參與到我們的活動中。我們是Mental health Gate Keeper 2023 Group 2，如果有任何意見和建議可以隨時mail我們嗷：[22626433@life.hkbu.edu.hk](mail:22626433@life.hkbu.edu.hk)。
 
@@ -16,4 +16,4 @@
 
 
 
-**We used contents from :**[mindhk](https://www.mind.org.hk/zh-hant/), [樹洞香港](https://treehole.hk/), [暫停實驗室](https://ebp.gesedna.com/) (alphabetical).
+**We used contents from:** [mindhk](https://www.mind.org.hk/zh-hant/), [樹洞香港](https://treehole.hk/), [暫停實驗室](https://ebp.gesedna.com/), [HKBU輔導中心](https://sa.hkbu.edu.hk/cdc/tc).

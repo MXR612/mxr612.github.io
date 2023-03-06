@@ -12,17 +12,25 @@
 
 這是一個在心理學中常用的測試，並廣泛用於各個領域，信度高於人們熟悉的的MBTI、九型人格等。題目雖然多滴，但應該都值得。
 
-<!--個性優勢(cerester stream 24條)-->
-
 ### [你是願意成長嗎？](https://treehole.hk/resources/growth-mindset/)(8 items)
 
 看看你是願意提升自己的還是安於現狀的？
 
-<!-- [巴納姆性格測試](https://treehole.hk/resources/barnum-personality-test/) -->
-
 ### [人生重要領域](https://ebp.gesedna.com/assessment/valueorientation)(85 items)
 
 哇，這個好多啊，得閒再說？其實是因爲列舉了很多領域啦，如果你正在尋找方向的話，可以試一下。不同的價值可以引導人做出不同的判斷和行爲，看看你最重視的是哪一塊，家庭、朋友還是學業？
+
+### [豐盛人生](https://www2.hkbu.edu.hk/sasurvey/psychoTest/emotions_test_tc.php?type=FS)(8 items)
+
+### [完美主義](https://www2.hkbu.edu.hk/sasurvey/psychoTest/emotions_test_tc.php?type=FMPS)(29 items)
+
+### [親密關係經驗](https://www2.hkbu.edu.hk/sasurvey/psychoTest/interpersonal_test_tc.php?type=ECR)(36 items)
+
+### [三角愛情](https://www2.hkbu.edu.hk/sasurvey/psychoTest/interpersonal_test_tc.php?type=STLS)(45 items)
+
+<!--個性優勢(cerester stream 24條)-->
+
+<!-- [巴納姆性格測試](https://treehole.hk/resources/barnum-personality-test/) -->
 
 <!-- [(45)](https://ebp.gesedna.com/assessment/mindset) -->
 
@@ -42,6 +50,14 @@
 
 這是一個包含了很多心理困擾簡化量表的測試，只有30題，值得一試。
 
+### [社恐量表](https://www2.hkbu.edu.hk/sasurvey/psychoTest/interpersonal_test_tc.php?type=LSAS)(24 items)
+
+### [進食態度](https://www2.hkbu.edu.hk/sasurvey/psychoTest/lifestyle_test_tc.php?type=EAT)(26 items)
+
+### [壓力下失眠](https://www2.hkbu.edu.hk/sasurvey/psychoTest/lifestyle_test_tc.php?type=FIRST)(9 items)
+
+### [網絡成癮](https://www2.hkbu.edu.hk/sasurvey/psychoTest/lifestyle_test_tc.php?type=INTERNET)(20 items)
+
 <!-- [抑鬱&快樂 (PHQ-9+SHS)](https://treehole.hk/phq9-2/) -->
 
 ## 能力
@@ -49,6 +65,8 @@
 ### [在遇到困難的時候，你會尋求幫助嗎？](https://ebp.gesedna.com/assessment/helpseeking)(24 items)
 
 求助是很需要勇氣的事，在香港近四成的抑鬱症患者沒能尋求專業的幫助，而每位精神病患者平均需要花費十年尋求幫助。就像肚痛要看醫生，當人們有心理困擾的時候，最好的方式應該是尋求專業的幫助。看看你有沒有這種勇氣呢？
+
+### [韌性](https://www2.hkbu.edu.hk/sasurvey/psychoTest/emotions_test_tc.php?type=BRS)(6 items)
 
 ### [你活得正觀嘛？ (cmaas)](https://treehole.hk/resources/mindfulness-test-cmaas/)(15 items)
 
