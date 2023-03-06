@@ -14,7 +14,7 @@
 
 **如果可以**，你可以與信任的朋友或家庭成員，或者尋找醫療或心理健康專家傾談。 展開對話可2[能讓你感到很困難，但這些人希望了解你並幫助你。
 
-## 幫助熱線
+## [幫助熱線](https://www.mind.org.hk/zh-hant/find-help-now/)
 
 明愛向晴軒Caritas Family Crisis Support Centre：[18288](tel:18288)
 
